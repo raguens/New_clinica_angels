@@ -9,9 +9,10 @@
     </ul>
 </div>
 
+
 <div id="sessao_login">
-    <fieldset id="fd_sessao_login">
-        <legend>Iniciar Sessão</legend>
+  <fieldset id="fd_sessao_login">
+      <legend>Iniciar Sessão</legend>
             <form action="" method="post"/>
 
             <label class="lb_login">Usuário: <label>
@@ -26,5 +27,5 @@
 
             <input type="submit" value="Entrar"/>
             <input type="reset" value=" Limpar"/>
-    </fieldset>
+  </fieldset>
 </div>

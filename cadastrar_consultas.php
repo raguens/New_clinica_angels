@@ -7,6 +7,9 @@
   </head>
   <body id="body_frmconsultas">
 
+      <?php
+        require_once 'menu.php';
+      ?>
       <section>
           <form method="post" action="">
               <fieldset id="fd_cadastrar_consultas">
