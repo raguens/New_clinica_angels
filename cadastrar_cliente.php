@@ -16,25 +16,28 @@
               <fieldset id="fd_cadastrar_cliente">
                   <legend>Cadastrar Cliente</legend>
 
-                  <label>Nome: </label>
-                  <input class="campos" type="text" name="txtNome" maxlength="100" required autofocus>
+                      <label>Nome: </label>
+                      <input class="campos" type="text" name="txtNome" maxlength="100" required autofocus>
 
-                  <label>Nascimento: </label>
-                  <input class="campos" type="date" name="txtNascimento" required>
+                      <label>Nascimento: </label>
+                      <input class="campos" type="date" name="txtNascimento" required>
 
                       <br><br>
 
                       <label>Email: </label>
                       <input class="campos" type="email" name="txtEmail" maxlength="100" required>
 
-                      <label>Sexo: </label>
-                      <input type="radio" name="rbSexo" required/> Masculino
-                      <input type="radio" name="rbSexo"/> Feminino
+                      <label>CPF: </label>
+                      <input class="campos" type="text" name="txtCPF" maxlength="100" required>
 
                       <br><br>
 
                       <label>Telefone: </label>
                       <input class="campos" type="text" name="txtTelefone" maxlength="20" required>
+
+                      <label>Sexo: </label>
+                      <input type="radio" name="rbSexo" required/> Masculino
+                      <input type="radio" name="rbSexo"/> Feminino
 
                       <br><br>
 
