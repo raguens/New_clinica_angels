@@ -5,15 +5,22 @@
     <title>Teste Formulário</title>
     <link rel="stylesheet" type="text/css" href="estilo.css">
   </head>
+
+
   <body id="body_frmconsultas">
 
-      <section>
+    <?php
+        require_once 'menu.php';
+     ?>
+
+
+      <section id="section_cadastrar_consultas">
           <form method="post" action="">
               <fieldset id="fd_cadastrar_consultas">
                   <legend>Marcação de Consulta</legend>
 
-                  <label for="nome">Nome: </label>
-                  <input class="campos" type="text" id="nome" name="txtNome" maxlength="100" required autofocus>
+                  <label for="nome_cadastrar_consulta">Nome: </label>
+                  <input class="campos" type="text" id="nome_cadastrar_consulta" name="txtNome" maxlength="100" required autofocus>
 
                   <br><br>
 
@@ -47,8 +54,8 @@
 
                       <br><br>
 
-                  <input type="submit" value="Marcar Consulta">
-                  <input type="reset" value="Limpar informações">
+                  <input class="btn_3d" type="submit" value="Marcar Consulta">
+                  <input class="btn_3d" type="reset" value="Limpar informações">
               </fieldset>
           </form>
       </section>

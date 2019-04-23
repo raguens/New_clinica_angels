@@ -7,43 +7,48 @@
   </head>
 
   <body id="body_frmconsultas">
+    <?php
+        require_once 'menu.php';
+     ?>
 
-      <section>
+      <section id="section_cadastrar_cliente">
           <form method="post" action="">
-              <fieldset id="fd_cadastrar">
-                  <legend>Cadastrar cliente</legend>
+              <fieldset id="fd_cadastrar_cliente">
+                  <legend>Cadastrar Cliente</legend>
 
-                  <label for="Nome">Nome: </label>
-                  <input class="campos" type="text"  name="txtNome" maxlength="100" required autofocus>
+                  <label>Nome: </label>
+                  <input class="campos" type="text" name="txtNome" maxlength="100" required autofocus>
 
-                  <br><br>
-
-                  <label for="Data de Aniversario">Data de Aniversario: </label>
-                  <input class="campos" type="date"  name="txtDate" maxlength="100" required>
-
+                  <label>Nascimento: </label>
+                  <input class="campos" type="date" name="txtNascimento" required>
 
                       <br><br>
 
-                      <label for="Email">Email: </label>
-                      <input class="campos" type="email"  name="txtEmail" maxlength="100" required>
+                      <label>Email: </label>
+                      <input class="campos" type="email" name="txtEmail" maxlength="100" required>
+
+                      <label>Sexo: </label>
+                      <input type="radio" name="rbSexo" required/> Masculino
+                      <input type="radio" name="rbSexo"/> Feminino
 
                       <br><br>
 
-                      <label for="Sexo">Sexo: </label>
-                      <input class="campos" type="sex"  name="txtsex" maxlength="100" required>
+                      <label>Telefone: </label>
+                      <input class="campos" type="text" name="txtTelefone" maxlength="20" required>
 
-                          <br><br>
-                          <label for="phone">Telefone: </label>
-                          <input class="campos" type="text"  name="txtsex" maxlength="100" required>
+                      <br><br>
 
-                          <br><br>
+                      <label>senha: </label>
+                      <input class="campos" type="password" name="txtSenha" maxlength="100" required>
 
-                          <label for="senha">senha: </label>
-                          <input class="campos" type="password"  name="txtsex" maxlength="100" required>
+                      <label>Confirmar senha: </label>
+                      <input class="campos" type="password" name="txtConfirmarSenha" maxlength="100" required>
 
+                      <br><br>
 
-                  <input type="submit" value="cadastrar">
-                  <input type="reset" value="Limpar informações">
+                  <input class="btn_3d" type="submit" value="Cadastrar">
+                  <input class="btn_3d" type="reset" value="Limpar informações">
+
               </fieldset>
           </form>
       </section>
