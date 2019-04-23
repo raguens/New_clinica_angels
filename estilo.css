@@ -1,20 +1,36 @@
 body{
   padding: 0;
   margin: 0;
-}
-
-#body_frmconsultas{
-  margin: 0;
   background-color: #ccc;
   font-family: Verdana;
   font-size: 95%;
 }
 
+/* --- Cadastrar consultas --- */
+
+#section_cadastrar_consultas{
+  position: relative;
+  top: 130px;
+  border-radius: 10px;
+}
+
+#fd_cadastrar_consultas{
+  width: 700px;
+  margin: auto;
+  border: 3px solid #171717;
+  border-radius: 5px;
+}
+
 /* ----  Menu --- */
 
 #menu_navegacao{
+<<<<<<< HEAD
   width: 1286px;
   height: 200px;
+=======
+  width: 100%;
+  height: 120px;
+>>>>>>> f148c5dd5a64316739d0fe78f1baadaa1227b714
   background: #0066ff;
   float: left;
 }
@@ -31,17 +47,19 @@ body{
   float: left;
   font: 15px calibri;
   color: #ffaaff;
-  padding: 30px;
+  padding: 20px;
 }
 
 #menu_navegacao ul li a{
   color: #333;
   text-decoration: none;
   padding: 10px;
-  display: block;
+  text-align: center;
   position: relative;
-  left: 500px;
-  top: 110px;
+
+  left: 420px;
+  top: 60px;
+
 }
 
 .btn_3d{
@@ -60,11 +78,15 @@ body{
   box-shadow: none;
 }
 
-/* --- Sessão Login --- */
+/* --- Login index --- */
 
 #fd_sessao_login{
-  width: 455px;
-  height: 200px;
+
+  width: 550px;
+  height: 250px;
+  position: relative;
+  top: 20px;
+
   margin: auto;
   border: 3px solid #ddd;
   border-radius: 5px;
@@ -72,8 +94,11 @@ body{
 }
 
 #sessao_login{
-  width: 500px;
+  width: 33%;
   height: 300px;
+  position: absolute;
+  right: 0px;
+
   background: #33bbff;
   float: left;
   border-radius: 0 0 5px 5px;
@@ -81,14 +106,48 @@ body{
 }
 
 .input_login{
-  width: 40%;
-  height: 12%;
+  width: 200px;
+  height: 20px;
   border-radius: 3px;
 }
 
 .lb_login{
   font: 25px calibri;
 
+}
+
+#fd_sessao_login input.input_login{
+  margin-left: 20px;
+}
+
+#fd_sessao_login input.btn_3d{
+  margin-right: 30px;
+  position: relative;
+  left: 40px;
+}
+
+#fd_sessao_login h2{
+  font: 20px calibri;
+  font-weight: bold;
+  position: relative;
+  left: 280px;
+  bottom: 230px;
+}
+
+#fd_sessao_login a.cadastrese{
+  position: relative;
+  left: 340px;
+  bottom: 230px;
+  text-decoration: none;
+}
+
+#fd_sessao_login a.cadastrese:hover{
+  color: white;
+  text-decoration: underline;
+}
+
+#fd_sessao_login a.cadastrese:active{
+  text-decoration: none;
 }
 
 /* --- Index --- */
@@ -100,21 +159,30 @@ section{
   padding: 10px;
 }
 
-#fd_cadastrar_consultas{
-  width: 700px;
-  margin: auto;
-  border: 3px solid #ddd;
-  border-radius: 5px;
-}
-
 .campos{
   width: 200px;
   height: 30px;
-  border: 1px solid #ddd;
+  border: 1px solid #ccc;
   border-radius: 3px;
 }
 
 textarea{
   width: 250px;
   height: 100px;
+}
+
+/* --- Cadastrar cliente --- */
+
+#section_cadastrar_cliente{
+  position: relative;
+  top: 130px;
+  border-radius: 10px;
+}
+
+#fd_cadastrar_cliente{
+  width: 700px;
+  height: 300px;
+  margin: auto;
+  border: 3px solid #171717;
+  border-radius: 5px;
 }
