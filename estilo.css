@@ -90,7 +90,7 @@ body{
   position: absolute;
   right: 0px;
   background: #33bbff;
-  float: left;
+  //float: left;
   border-radius: 0 0 5px 5px;
 }
 
