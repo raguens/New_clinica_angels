@@ -12,7 +12,7 @@
      ?>
 
       <section id="section_cadastrar_cliente">
-          <form method="post" action="">
+          <form method="post" action="index.php">
               <fieldset id="fd_cadastrar_cliente">
                   <legend>Cadastrar Cliente</legend>
 
@@ -20,7 +20,7 @@
                       <input class="campos" type="text" name="txtNome" maxlength="100" required autofocus>
 
                       <label>Nascimento: </label>
-                      <input class="campos" type="date" name="txtNascimento" required>
+                      <input class="campos" type="date" name="txtNascimento" maxlength="50" required>
 
                       <br><br>
 
@@ -28,15 +28,15 @@
                       <input class="campos" type="email" name="txtEmail" maxlength="100" required>
 
                       <label>CPF: </label>
-                      <input class="campos" type="text" name="txtCPF" maxlength="100" required>
+                      <input class="campos" type="text" name="txtCpf" maxlength="50" required>
 
                       <br><br>
 
                       <label>Telefone: </label>
-                      <input class="campos" type="text" name="txtTelefone" maxlength="20" required>
+                      <input class="campos" type="text" name="txtTelefone" maxlength="50" required>
 
                       <label>Sexo: </label>
-                      <input type="radio" name="rbSexo" required/> Masculino
+                      <input type="radio" name="rbSexo" maxlength="50" required/> Masculino
                       <input type="radio" name="rbSexo"/> Feminino
 
                       <br><br>

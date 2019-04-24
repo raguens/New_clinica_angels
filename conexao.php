@@ -4,5 +4,6 @@
     $usuario = "inf_m171";
     $senha = "senacrs";
 
-    $conn = mysqli_connect($servidor, $banco, $usuario, $senha);
+    $conn = mysql_connect($servidor, $usuario, $senha) or die(mysql_error());
+    mysql_select_db($banco) or die(mysql_error());
  ?>
