@@ -7,8 +7,10 @@
   </head>
 
 
-  <body id="body_frmconsultas">
-
+  <body>
+    <?php
+      include_once 'background.php';
+     ?>
 
     <?php
         require_once 'menu.php';

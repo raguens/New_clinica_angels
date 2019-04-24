@@ -10,6 +10,10 @@
   </head>
 
   <body>
+    
+    <?php
+      include_once 'background.php';
+     ?>
 
       <?php
       require_once 'menu.php';

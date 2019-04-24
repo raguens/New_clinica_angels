@@ -127,6 +127,7 @@ body{
   left: 340px;
   bottom: 230px;
   text-decoration: none;
+  color: #ffcc00;
 }
 
 #fd_sessao_login a.cadastrese:hover{
@@ -173,4 +174,11 @@ textarea{
   margin: auto;
   border: 3px solid #171717;
   border-radius: 5px;
+}
+
+/* --- Background --- */
+
+#bg_geral{
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }

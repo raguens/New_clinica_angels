@@ -1,6 +1,7 @@
 <?php
-    session_start();
     include_once '../conexao.php';
+    include_once '../cadastrar_cliente.php';
+
 
     $nome = $_POST['txtNome'];
     $nascimento = $_POST['txtNascimento'];
@@ -10,13 +11,9 @@
     $sexo = $_POST['rbSexo'];
     $senha = $_POST['txtSenha'];
 
-    $sql = mysql_query("INSERT INTO clientes(nome, nascimento, email, cpf,
+    mysqli_query($conn, "INSERT INTO clientes(nome, nascimento, email, cpf,
        telefone, sexo, senha) VALUES('$nome', '$nascimento', '$email', '$cpf',
-       '$telefone', '$sexo', '$senha')")
+       '$telefone', '$sexo', '$senha')");
 
-    /*
-    $result_usuario = "insert into usuarios (nome, telefone, nascimento, email, cpf, sexo, senha, admin)";
-    $resultado_usuario = mysqli_query($conn, $result_usuario);
-    */
 
 ?>

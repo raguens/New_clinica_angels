@@ -1,3 +1,9 @@
+<?php
+  include_once 'conexao.php';
+  
+  session_start();
+
+ ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,13 +12,17 @@
     <link rel="stylesheet" type="text/css" href="estilo.css">
   </head>
 
-  <body id="body_frmconsultas">
+  <body>
+    <?php
+      include_once 'background.php';
+     ?>
+
     <?php
         require_once 'menu.php';
      ?>
 
       <section id="section_cadastrar_cliente">
-          <form method="post" action="index.php">
+          <form method="post" action="controller/salvar_cliente.php">
               <fieldset id="fd_cadastrar_cliente">
                   <legend>Cadastrar Cliente</legend>
 
