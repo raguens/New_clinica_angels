@@ -36,3 +36,6 @@
                    <h2> Não tem um registro conosco? </h2>
                      <a class="cadastrese" href="cadastrar_cliente.php"> Cadastre-se </a>
            </fieldset>
+      </div>
+    </body>
+</html>
