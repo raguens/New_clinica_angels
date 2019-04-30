@@ -1,6 +1,7 @@
 <?php
-  include_once 'conexao.php';
-  
+//  include_once 'conexao.php';
+  require_once 'classes/clsClientes.php';
+  $cliente = new Clientes;
   session_start();
 
  ?>
@@ -22,7 +23,7 @@
      ?>
 
       <section id="section_cadastrar_cliente">
-          <form method="post" action="controller/salvar_cliente.php">
+          <form method="POST">
               <fieldset id="fd_cadastrar_cliente">
                   <legend>Cadastrar Cliente</legend>
 
@@ -65,5 +66,43 @@
               </fieldset>
           </form>
       </section>
+      <?php
+      //verificar se clicou no botão
+      if(isset($_POST['txtNome'])){
+        $nome = ($_POST['txtNome']);
+        $nascimento = ($_POST['txtNascimento']);
+        $email = ($_POST['txtEmail']);
+        $cpf = ($_POST['txtCpf']);
+        $telefone = ($_POST['txtTelefone']);
+        $sexo = ($_POST['rbSexo']);
+        $senha = ($_POST['txtSenha']);
+        $confirmarSenha = ($_POST['txtConfirmarSenha']);
+        //verificar se está preenchido
+        if(!empty($nome) && !empty($nascimento) && !empty($email) && !empty($cpf)
+        && !empty($telefone) && !empty($sexo) && !empty($senha)
+        && !empty($confirmarSenha)){
+
+          $cliente->conectar("clinica_angels", "localhost", "root", "");
+          if($cliente->msgErro == "")//tudo ok
+          {
+            if($senha == $confirmarSenha){
+              if($cliente->cadastrar($nome, $nascimento, $email, $cpf, $telefone, $sexo,
+              $senha)){
+                echo "Cadastrado com sucesso!";
+              }else{
+                echo "Email já cadastrado!";
+              }
+            }else{
+              echo "Senha e confirmar senha não correspondem";
+            }
+
+          }else{
+            echo "Erro: ".$cliente->msgErro;
+          }
+      }else{
+        echo "Preencha todos os campos!";
+      }
+}
+      ?>
   </body>
 </html>
