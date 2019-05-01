@@ -47,7 +47,7 @@ class clientes
       //caso não, cadastrar
   }
 
-  public function logar(){
+  public function logar($email, $senha){
       global $pdo;
       //verificar  se email e senha estao cadastrados
       $sql = $pdo->prepare("SELECT id FROM clientes WHERE email = :c AND
@@ -60,7 +60,7 @@ class clientes
         //entrar no sistema
         $dado = $sql->fetch();
         session_start();
-        $_SESSION['id_usuario'] = $dado['id_usuario'];
+        $_SESSION['id'] = $dado['id'];
         return true; //logado com sucesso
       }else{
           return false; //não foi possível logar

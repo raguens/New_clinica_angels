@@ -88,19 +88,39 @@
             if($senha == $confirmarSenha){
               if($cliente->cadastrar($nome, $nascimento, $email, $cpf, $telefone, $sexo,
               $senha)){
-                echo "Cadastrado com sucesso!";
+                ?>
+                <div id="msg_sucesso">
+                Cadastrado com sucesso!
+                </div>
+                <?php
               }else{
-                echo "Email já cadastrado!";
+                ?>
+                <div class="msg_erro">
+                Email já cadastrado!
+                </div>
+                <?php
               }
             }else{
-              echo "Senha e confirmar senha não correspondem";
+              ?>
+              <div class="msg_erro">
+              Senha e confirmar senha não correspondem
+              </div>
+              <?php
             }
 
           }else{
-            echo "Erro: ".$cliente->msgErro;
+            ?>
+            <div class="msg_erro">
+            <?php echo "Erro: ".$cliente->msgErro;?>
+            </div>
+            <?php
           }
       }else{
+        ?>
+        <div class="msg_erro">
         echo "Preencha todos os campos!";
+        </div>
+        <?php
       }
 }
       ?>

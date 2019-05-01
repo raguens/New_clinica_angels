@@ -1,5 +1,6 @@
 <?php
-    session_start();
+    require_once 'classes/clsClientes.php';
+    $cliente = new Clientes;
  ?>
 <!DOCTYPE html>
 <html>
@@ -10,7 +11,7 @@
   </head>
 
   <body>
-    
+
     <?php
       include_once 'background.php';
      ?>
@@ -24,8 +25,8 @@
                <legend>Iniciar Sessão</legend>
                    <form action="" method="post"/>
 
-                   <label class="lb_login">Usuário: <label> <br>
-                       <input class="input_login" type="text" name="txtLogin" placeholder="Digite seu nome de usário" required/>
+                   <label class="lb_login">Email: <label> <br>
+                       <input class="input_login" type="email" name="txtEmail" placeholder="Digite seu email" required/>
 
                        <br><br>
 
@@ -41,5 +42,34 @@
                      <a class="cadastrese" href="cadastrar_cliente.php"> Cadastre-se </a>
            </fieldset>
       </div>
+      <?php
+
+      if(isset($_POST['txtNome'])){
+
+        $email = ($_POST['txtEmail']);
+        $senha = ($_POST['txtSenha']);
+
+        if(!empty($email) && !empty($senha)){
+
+          $cliente->conectar("clinica_angels", "localhost", "root", "");
+          if($cliente->msgErro == ""){
+
+          if($cliente->logar($email, $senha)){
+            header("index.php");
+          }else{
+            echo "Email/senha incorretos!";
+          }
+
+        }else{
+            echo "Erro: ".$cliente->msgErro;
+          }
+
+        }else{
+          echo "Preencha os campos para iniciar a sessão!";
+        }
+  }
+
+
+       ?>
     </body>
 </html>

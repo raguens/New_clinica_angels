@@ -162,6 +162,9 @@ textarea{
 
 /* --- Cadastrar cliente --- */
 
+
+
+
 #section_cadastrar_cliente{
   position: relative;
   top: 130px;
@@ -174,6 +177,30 @@ textarea{
   margin: auto;
   border: 3px solid #171717;
   border-radius: 5px;
+}
+
+div#msg_sucesso{
+  padding: 10px;
+  position: relative;
+  left: 880px;
+  top: 35px;
+  border: 3px solid black;
+  background-color: green;
+  width: 350px;
+  opacity: 0.6;
+  border-radius: 10px;
+}
+
+div.msg_erro{
+  padding: 10px;
+  position: relative;
+  left: 880px;
+  top: 35px;
+  border: 3px solid black;
+  background-color: red;
+  width: 350px;
+  opacity: 0.6;
+  border-radius: 10px;
 }
 
 /* --- Background --- */
