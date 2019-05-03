@@ -1,6 +1,6 @@
 <?php
 
-class clientes
+class Clientes
 {
   private $pdo;
   public $msgErro = ""; //tudo ok

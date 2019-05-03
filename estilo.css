@@ -21,6 +21,30 @@ body{
   border-radius: 5px;
 }
 
+.msg_erro2{
+  padding: 10px;
+  position: relative;
+  left: 920px;
+  top: 35px;
+  border: 3px solid black;
+  background-color: red;
+  width: 350px;
+  opacity: 0.6;
+  border-radius: 10px;
+}
+
+#msg_sucesso2{
+  padding: 10px;
+  position: relative;
+  left: 920px;
+  top: 35px;
+  border: 3px solid black;
+  background-color: green;
+  width: 350px;
+  opacity: 0.6;
+  border-radius: 10px;
+}
+
 /* ----  Menu --- */
 
 #menu_navegacao{
@@ -165,9 +189,6 @@ textarea{
 }
 
 /* --- Cadastrar cliente --- */
-
-
-
 
 #section_cadastrar_cliente{
   position: relative;

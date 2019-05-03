@@ -1,10 +1,12 @@
 <?php
+    require_once 'classes/clsConsultas.php';
+    $consultas = new Consultas;
     session_start();
     if(!isset($_SESSION['id'])){
       header("location: index.php");
       exit;
     }
- ?>
+?>
 
 <!DOCTYPE html>
 <html>
@@ -61,7 +63,7 @@
 
                       <label for="msg">Especifique algo, se necessário: </label>
                       <br><br>
-                      <textarea id="msg"></textarea>
+                      <textarea name="txtMsg" maxlength="200" id="msg"></textarea>
 
                       <br><br>
 
@@ -70,6 +72,54 @@
               </fieldset>
           </form>
       </section>
-      
+<?php
+//verificar se clicou no botão cadastrar
+if(isset($_POST['txtNome'])){
+
+  $nome = ($_POST['txtNome']);
+  $email = ($_POST['txtEmail']);
+  $horario = ($_POST['txtHorario']);
+  $pagamento = ($_POST['txtPagamento']);
+  $mensagem = ($_POST['txtMsg']);
+
+  //verificar se está preenchido
+  if(!empty($nome) && !empty($email) && !empty($horario) && !empty($pagamento)
+  && !empty($mensagem)){
+
+$consultas->conectar("clinica_angels", "localhost", "root", "");
+if($consultas->msgErro == "") //esta tudo ok
+{
+    if($consultas->cadastrar($nome, $email, $horario, $pagamento, $mensagem)){
+      ?>
+      <div id="msg_sucesso2">
+      Consulta agendada com sucesso!
+      </div>
+      <?php
+    }else{
+      ?>
+      <div class="msg_erro2">
+      Este horário já está ocupado, por favor selecione outro.
+      </div>
+      <?php
+    }
+  }else{
+    ?>
+    <div class="msg_erro2">
+  <?php echo "Erro: ".$consultas->msgErro; ?>
+    </div>
+  <?php
+}
+}else{
+  ?>
+  <div class="msg_erro2">
+  Preencha todos os campos!
+  </div>
+  <?php
+}
+}
+
+
+ ?>
+
   </body>
 </html>
