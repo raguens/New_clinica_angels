@@ -99,6 +99,16 @@ body{
   float: left;
 }
 
+#logo_anjo{
+  width: 120px;
+  height: 120px;
+  float:right;
+  position: relative;
+  left: -640px;
+  top: -330px;
+
+}
+
 /* --- Login index --- */
 
 #fd_sessao_login{

@@ -3,6 +3,8 @@
 <li><a class="btn_3d" href="cadastrar_consultas.php">Marcação</a></li>
 </div>
 
+
+
 <div id="sessao_login">
     <fieldset id="fd_sessao_login">
         <legend>Iniciar Sessão</legend>
@@ -23,6 +25,6 @@
 
             <h2> Não tem um registro conosco? </h2>
               <a class="cadastrese" href="cadastrar_cliente.php"> Cadastre-se </a>
-
+              
     </fieldset>
 </div>
