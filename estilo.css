@@ -167,6 +167,15 @@ body{
   text-decoration: none;
 }
 
+#logo_anjo{
+  width: 160x;
+  height: 160px;
+  float: left;
+  position: relative;
+  left: 1540px;
+
+
+}
 /* --- Index --- */
 
 section{

@@ -31,3 +31,5 @@ if(session_status() != PHP_SESSION_ACTIVE ){
 
     </fieldset>
 </div>
+
+<img id="logo_anjo" src="imagem/angel.png">
