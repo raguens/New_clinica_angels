@@ -43,18 +43,22 @@
           if($cliente->msgErro == ""){
 
           if($cliente->logar($email, $senha)){
-            header("Location: index.php");
+            ?>
+            <div class="msg_sucesso3">
+              Logado com sucesso!
+            </div>
+            <?php
           }else{
             ?>
-            <div class="msg_erro">
-            echo "Email/senha incorretos!";
+            <div class="msg_erro3">
+            Email/senha incorretos!
             </div>
             <?php
           }
 
         }else{
           ?>
-            <div class="msg_erro">
+            <div class="msg_erro3">
               <?php echo "Erro: ".$cliente->msgErro; ?>
             </div>
           <?php
@@ -62,8 +66,8 @@
 
         }else{
           ?>
-          <div class="msg_erro">
-          echo "Preencha os campos para iniciar a sessão!";
+          <div class="msg_erro3">
+          Preencha os campos para iniciar a sessão!
           </div>
           <?php
         }

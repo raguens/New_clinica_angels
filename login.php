@@ -1,8 +1,3 @@
-<?php
-if(session_status() != PHP_SESSION_ACTIVE ){
-    session_start();
-}
-?>
 
 <div id="btn_cadastrar_consultas">
 <li><a class="btn_3d" href="cadastrar_consultas.php">Marcação</a></li>
