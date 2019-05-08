@@ -6,7 +6,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Clinica Angels</title>
+    <title>Clínica Angels</title>
     <link rel="stylesheet" type="text/css" href="estilo.css">
   </head>
 
@@ -16,19 +16,13 @@
       include_once 'background.php';
      ?>
 
+     <?php
+     require_once 'login.php';
+     ?>
+
       <?php
       require_once 'menu.php';
        ?>
-
-       <?php
-       require_once 'login.php';
-       ?>
-
-      <div id="sair">
-      <a class="btn_3d" href="sair.php">Sair</a>
-      </div>
-
-
 
       <?php
 
@@ -43,9 +37,10 @@
           if($cliente->msgErro == ""){
 
           if($cliente->logar($email, $senha)){
+
             ?>
-            <div class="msg_sucesso3">
-              Logado com sucesso!
+            <div id="msg_sucesso3">
+            Bem vindo a sua seção!
             </div>
             <?php
           }else{
