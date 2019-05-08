@@ -95,8 +95,8 @@ body{
 }
 
 #btn_logado{
+  margin-left: 100px;
   float: left;
-  margin-left: 300px;
 }
 
 #logo_anjo{
@@ -259,6 +259,16 @@ div.msg_erro{
   width: 350px;
   opacity: 0.6;
   border-radius: 10px;
+}
+
+/* --- Visualizar Consultas --- */
+
+#tabela_consultas{
+  display: inline-block;
+  position: relative;
+  left: 700px;
+  top: 150px;
+  border: 3px solid red;
 }
 
 /* --- Background --- */

@@ -1,3 +1,12 @@
+<link rel="stylesheet" type="text/css" href="estilo.css">
+
+<?php
+require_once 'background.php';
+require_once 'menu.php';
+
+ ?>
+
+<div id="tabela_consultas">
 <?php
 
 echo "<table border=1>";
@@ -33,3 +42,4 @@ while($registro = mysqli_fetch_array($resultado)){
 mysqli_close($conexao);
 echo "</table>";
  ?>
+</div>
