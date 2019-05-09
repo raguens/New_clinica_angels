@@ -40,7 +40,7 @@
 
             ?>
             <div id="msg_sucesso3">
-            Bem vindo a sua seção!
+            <?php echo "Êxito em logar com: " .$email; ?>
             </div>
             <?php
           }else{
