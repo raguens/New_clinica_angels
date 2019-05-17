@@ -19,7 +19,7 @@ echo "<th>Pagamento</th>";
 echo "<th>Mensagem</th>";
 echo "</tr>";
 
-$conexao = mysqli_connect("localhost", "root", "", "clinica_angels") or die("Erro ao conectar!");
+$conexao = mysqli_connect("m171_03_T2E", "inf_m171", "senacrs", "senacinfo-db") or die("Erro ao conectar!");
 $sql = "SELECT * FROM consultas";
 $resultado = mysqli_query($conexao, $sql) or die("Erro ao registrar!");
 

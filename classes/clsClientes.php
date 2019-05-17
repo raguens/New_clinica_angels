@@ -13,7 +13,7 @@ class Clientes
         $msgErro = $e->getMessage();
       }
 
-      $pdo = new PDO("mysql:dbname=".$banco.";servidor=".$servidor,
+      $pdo = new PDO("mysql:dbname=".$banco."servidor=".$servidor,
       $usuario, $senha);
   }
 
