@@ -6,7 +6,7 @@ require_once 'menu.php';
 
  ?>
 
-<div id="tabela_consultas">
+<div id="id_table">
 <?php
 
 echo "<table border=1>";
@@ -14,12 +14,12 @@ echo "<tr>";
 echo "<th>ID</th>";
 echo "<th>Nome</th>";
 echo "<th>Email</th>";
-echo "<th>Horario</th>";
+echo "<th>Horário</th>";
 echo "<th>Pagamento</th>";
 echo "<th>Mensagem</th>";
 echo "</tr>";
 
-$conexao = mysqli_connect("m171_03_T2E", "inf_m171", "senacrs", "senacinfo-db") or die("Erro ao conectar!");
+$conexao = mysqli_connect("senacinfo-db", "inf_m171", "senacrs", "m171_03_T2E") or die("Erro ao conectar!");
 $sql = "SELECT * FROM consultas";
 $resultado = mysqli_query($conexao, $sql) or die("Erro ao registrar!");
 

@@ -54,10 +54,10 @@
 
                       <label>Selecione um metodo de pagamento: </label>
                           <br><br>
-                          <input type="radio" name="txtPagamento" required/> Dinheiro
-                          <input type="radio" name="txtPagamento"/> Crédito
-                          <input type="radio" name="txtPagamento"/> Débito
-                          <input type="radio" name="txtPagamento"/> Cheque <br>
+                          <input type="radio" value="Dinheiro" name="txtPagamento" required/> Dinheiro
+                          <input type="radio" value="Crédito" name="txtPagamento"/> Crédito
+                          <input type="radio" value="Débito" name="txtPagamento"/> Débito
+                          <input type="radio" value="Cheque" name="txtPagamento"/> Cheque <br>
 
                       <br>
 

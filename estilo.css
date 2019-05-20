@@ -263,13 +263,51 @@ div.msg_erro{
 
 /* --- Visualizar Consultas --- */
 
-#tabela_consultas{
-  display: inline-block;
-  position: relative;
-  left: 700px;
-  top: 150px;
-  border: 3px solid red;
+#id_table{
+  position: fixed;
+  left: 600px;
+  top: 280px;
 }
+
+#id_table{
+       width: 80%;
+       border-collapse: collapse;
+}
+
+
+#id_table th {
+       background-color:#CCC;
+       font-size: 12px;
+       color:#000;
+       padding-left:4px;
+       padding-right:4px;
+       border-bottom:solid 1px #CCC;
+       height:26px;
+       padding-right:5px;
+
+               }
+#id_table tr:nth-child(odd) {
+                       background-color:#f2f2f2;
+}
+
+#id_table tr:nth-child(even) {
+                       background-color:#f2f2f2;
+
+}
+
+#id_table tr, td {
+       height:26px;
+       padding-left:4px;
+       padding-right:2px;
+       font-family:Verdana, Geneva, sans-serif;
+       font-size:12px;
+       white-space:nowrap;
+       border-bottom:solid 1px #E1E1E1;
+       }
+#id_table tr:hover {
+       background-color:#00D8CC;
+       cursor:pointer; color:#000;
+
 
 /* --- Background --- */
 
