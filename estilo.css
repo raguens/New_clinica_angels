@@ -114,8 +114,9 @@ body{
 #fd_sessao_login{
   width: 550px;
   height: 250px;
-  position: relative;
+  position: fixed;
   top: 20px;
+  right: 30px;
   margin: auto;
   border-radius: 5px;
 
