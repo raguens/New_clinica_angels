@@ -14,11 +14,11 @@
 
                 <br><br>
 
-            <input class="btn_3d" type="submit" value="Entrar"/>
-            <input class="btn_3d" type="reset" value=" Limpar"/>
+            <input name="btn_entrar" class="btn_3d" type="submit" value="Entrar"/>
+            <input name="btn_limpar" class="btn_3d" type="reset" value=" Limpar"/>
 
             <h2> Não tem um registro conosco? </h2>
-            <a class="cadastrese" href="cadastrar_cliente.php"> Cadastre-se </a>
+            <a name="btn_cadastrese" class="cadastrese" href="cadastrar_cliente.php"> Cadastre-se </a>
 
     </fieldset>
 </div>

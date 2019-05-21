@@ -67,8 +67,8 @@
 
                       <br><br>
 
-                  <input class="btn_3d" type="submit" value="Marcar Consulta">
-                  <input class="btn_3d" type="reset" value="Limpar informações">
+                  <input name="btn_marcar" class="btn_3d" type="submit" value="Marcar Consulta">
+                  <input name="btn_limpar_informacoes" class="btn_3d" type="reset" value="Limpar informações">
               </fieldset>
           </form>
       </section>
@@ -83,10 +83,9 @@ if(isset($_POST['txtNome'])){
   $mensagem = ($_POST['txtMsg']);
 
   //verificar se está preenchido
-  if(!empty($nome) && !empty($email) && !empty($horario) && !empty($pagamento)
-  && !empty($mensagem)){
+  if(!empty($nome) && !empty($email) && !empty($horario) && !empty($pagamento)){
 
-$consultas->conectar("clinica_angels", "localhost", "root", "");
+$consultas->conectar("m171_03_T2E", "senacinfo-db", "inf_m171", "senacrs");
 if($consultas->msgErro == "") //esta tudo ok
 {
     if($consultas->cadastrar($nome, $email, $horario, $pagamento, $mensagem)){

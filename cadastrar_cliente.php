@@ -60,8 +60,8 @@
 
                       <br><br>
 
-                  <input class="btn_3d" type="submit" value="Cadastrar">
-                  <input class="btn_3d" type="reset" value="Limpar informações">
+                  <input name="btn_cadastrar" class="btn_3d" type="submit" value="Cadastrar">
+                  <input name="btn_limpar" class="btn_3d" type="reset" value="Limpar informações">
 
               </fieldset>
           </form>
@@ -82,7 +82,7 @@
         && !empty($telefone) && !empty($sexo) && !empty($senha)
         && !empty($confirmarSenha)){
 
-          $cliente->conectar("clinica_angels", "localhost", "root", "");
+          $cliente->conectar("m171_03_T2E", "senacinfo-db", "inf_m171", "senacrs");
           if($cliente->msgErro == "")//tudo ok
           {
             if($senha == $confirmarSenha){
