@@ -47,8 +47,8 @@
                       <input class="campos" type="text" name="txtTelefone" maxlength="50" required>
 
                       <label>Sexo: </label>
-                      <input type="radio" name="rbSexo" maxlength="50" required/> Masculino
-                      <input type="radio" name="rbSexo"/> Feminino
+                      <input type="radio" name="rbSexoM" maxlength="50" required/> Masculino
+                      <input type="radio" name="rbSexoF"/> Feminino
 
                       <br><br>
 
@@ -74,7 +74,9 @@
         $email = ($_POST['txtEmail']);
         $cpf = ($_POST['txtCpf']);
         $telefone = ($_POST['txtTelefone']);
+        if (rbSexoM == true or rbSexoF == true){
         $sexo = ($_POST['rbSexo']);
+        }        
         $senha = ($_POST['txtSenha']);
         $confirmarSenha = ($_POST['txtConfirmarSenha']);
         //verificar se está preenchido
@@ -118,7 +120,7 @@
       }else{
         ?>
         <div class="msg_erro">
-        echo "Preencha todos os campos!";
+        Preencha todos os campos!
         </div>
         <?php
       }
