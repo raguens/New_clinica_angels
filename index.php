@@ -33,7 +33,7 @@
 
         if(!empty($email) && !empty($senha)){
 
-          $cliente->conectar("m171_03_T2E", "senacinfo-db", "inf_m171", "senacrs");
+          $cliente->conectar("clinica_angels", "localhost", "root", "");
           if($cliente->msgErro == ""){
 
           if($cliente->logar($email, $senha)){

@@ -82,7 +82,7 @@
         && !empty($telefone) && !empty($sexo) && !empty($senha)
         && !empty($confirmarSenha)){
 
-          $cliente->conectar("m171_03_T2E", "senacinfo-db", "inf_m171", "senacrs");
+          $cliente->conectar("clinica_angels", "localhost", "root", "");
           if($cliente->msgErro == "")//tudo ok
           {
             if($senha == $confirmarSenha){

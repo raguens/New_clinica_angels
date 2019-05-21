@@ -86,7 +86,7 @@ if(isset($_POST['txtNome'])){
   if(!empty($nome) && !empty($email) && !empty($horario) && !empty($pagamento)
   && !empty($mensagem)){
 
-$consultas->conectar("m171_03_T2E", "senacinfo-db", "inf_m171", "senacrs");
+$consultas->conectar("clinica_angels", "localhost", "root", "");
 if($consultas->msgErro == "") //esta tudo ok
 {
     if($consultas->cadastrar($nome, $email, $horario, $pagamento, $mensagem)){

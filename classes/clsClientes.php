@@ -13,7 +13,7 @@ class Clientes
         $msgErro = $e->getMessage();
       }
 
-      $pdo = new PDO("mysql:host=senacinfo-db;dbname=m171_03_T2E",  "inf_m171", "senacrs" );
+      $pdo = new PDO("mysql:host=localhost;dbname=clinica_angels",  "root", "" );
   }
 
   public function cadastrar($nome, $nascimento, $email, $cpf, $telefone,
